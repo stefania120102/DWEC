@@ -2,18 +2,21 @@
 <body>
 
     <script>
-      
-        var primerNum = prompt("Digame un número");
-
-        var segundNum = prompt("Digame otro número");
 
         function suma(a,b){
-            return (a+b);
+            return a+b;
         }
+      
+        var primerNum = prompt("Digame un número");
+        var primerNum_int = parseInt(primerNum);
+
+        var segundNum = prompt("Digame otro número");
+        var segundNum_int = parseInt(segundNum);
+  
 
         var operacion;
-        operacion = suma(primerNum,segundNum);
-        console.log(primerNum + "+" + segundNum + "=" + operacion);
+        operacion = suma(primerNum_int,segundNum_int);
+        console.log(primerNum_int + "+" + segundNum_int + "=" + operacion);
 
     </script>
 </body>
