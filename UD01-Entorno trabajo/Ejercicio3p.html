@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<body>
+
+    <script>
+
+        var numAleatorio;
+        numAleatorio = Math.floor(Math.random() * 10);
+        document.write("El número aleatorio es  " + numAleatorio + " <br>");
+        do {
+        var alerta;
+        
+        var leerP = prompt("Escriba un número: ");
+        document.write("Su número es " + leerP  + " <br>");
+        if(numAleatorio  > leerP){
+           console.log("El número es mas mayor");
+       }else{
+           console.log("El número es menor");
+       }
+       
+               
+           /*     if (leerP == numAleatorio) {
+            alerta = alert("HAS ACERTADO!!");               
+            }*/
+        
+        
+       } while (leerP != numAleatorio);
+      
+       alerta = alert("HAS ACERTADO!!"); 
+     
+            /*var numero=1;
+            numero++;
+            document.write(numero);*/
+
+    </script>
+</body>
