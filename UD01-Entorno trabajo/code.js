@@ -6,6 +6,7 @@ tablero[2] = ["_","_","_"];
 console.log(tablero);
 
 
+
 function pinto_tablero(){
 
     for(i=0;i<=2; i++){
@@ -42,8 +43,19 @@ function tiradaMaquia(){
     document.write(aleatorio_o.replace("_", "o"));
 }
 
-function comprobarJugador(o,x){
+function comprobarJugador(){
     //comprobar si fila 1 2 y 3 son iguals para completar la diagonal
 
+    if((tab[0].value =="x" && tab[1]=="x" && tab[2].value =="x") 
+    || (tab[3].value =="x" && tab[4]=="x" && tab[5].value =="x") 
+    || (tab[6].value =="x" && tab[7]=="x" && tab[8].value =="x") 
+    || (tab[0].value =="x" && tab[3]=="x" && tab[6].value =="x") 
+    || (tab[1].value =="x" && tab[4]=="x" && tab[7].value =="x") 
+    || (tab[2].value =="x" && tab[5]=="x" && tab[8].value =="x") 
+    || (tab[0].value =="x" && tab[4]=="x" && tab[8].value =="x") 
+    || (tab[2].value =="x" && tab[4]=="x" && tab[6].value =="x")){
+    alert("Ganador: Jugador " + jugador1.value);
 
+
+    }
 }
