@@ -30,3 +30,61 @@ function clickCirculo(cirRandom){
     var tiempoFuera=setTimeout("alert('Se acabo el tiempo');", 5000); 
 
 }*/
+
+
+/*-----*/
+function pintoCirculoRojo(){
+    var numRandom= Math.floor(Math.random() * 9);
+    var cirRandom = "circulo_"+numRandom;
+    document.getElementById(cirRandom).className="objetivo"; //objetivo en el css es el que dara el fondo rojo
+    console.log("El circulo pintado es el n\u00FAmero " + (numRandom +1));
+    
+    if(pintado){
+        document.getElementById(cirRandom).addEventListener("click",pintoCirculoRojo); //cuando haga click en el circulo random pintará otro nuevo
+        pintado=false;
+        console.log("aqui es true y se hace false");
+    }
+
+    
+    contador++;
+    console.log("N\u00FAmero de rondas: " + contador);//contador de número de rondas
+    rondasMaximas();
+}
+
+function despintar(){
+    //DEBO HACER: cuando haga click despintar el que está pintado
+    if(pintado==false){
+        document.getElementById(cirRandom).removeAttribute("class");
+    }
+
+    if(pintado==false){
+        var cirRandom = "circulo_"+numRandom;
+        document.getElementById(cirRandom).className="objetivo"; //objetivo en el css es el que dara el fondo rojo
+        console.log("El circulo pintado es el n\u00FAmero " + (numRandom +1));
+    }
+
+}
+
+function tiempo3Segundos(){
+    //DEBO HACER: cada vez que pasen 3 segundos sin clickar en el circulo pintado mandar mensaje alerta
+    //DEBO HACER: cada vez que clicke resetear el tiempo
+}
+
+function rondasMaximas(){
+    if(contador==100){
+        alert("Eres un crack");
+    }
+}
+
+
+
+
+
+----
+function obetenerCirculo(){
+    var numRandom= Math.floor(Math.random() * 9);
+    var cirRandom = "circulo_"+numRandom;
+
+    return cirRandom;
+
+}
