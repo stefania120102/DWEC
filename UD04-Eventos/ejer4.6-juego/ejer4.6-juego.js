@@ -5,7 +5,7 @@ var crono1;
 var tiempo = 0;
 var crono2;
 
-//NO PUDE DESPINTAR LOS CIRCULOS PULSADOS ':/ 
+//NO PUDE DESPINTAR LOS CIRCULOS PULSADOS ':/
 
 function pintoCirculoRojo(){
     var numRandom= Math.floor(Math.random() * 9);
