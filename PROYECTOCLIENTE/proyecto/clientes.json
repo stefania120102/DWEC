@@ -1,0 +1,7 @@
+{ 
+	"clientes": [ 
+		{"dni": "121212", "nombre": "Ana", "direccion": "C/cid", "email": "ana@algo.com"}, 
+		{"dni": "131313", "nombre": "Mario", "direccion": "C/gerula","email":"mario@algo.com"}, 
+		{"dni": "222222", "nombre": "Valeria", "direccion": "C/madrid","email": "vale@algo.com"} 
+	] 
+}
