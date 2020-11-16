@@ -16,14 +16,10 @@ function funcion_ajax(){
                        document.getElementById("contenido").appendChild(dniC);
 
                        console.log(objeto_response.clientes[i]);
-                        for(x=0;x< objeto_response.length;x++){
-                            for(f=0; objeto_response[x].length;f++){
-                                console.log(objeto_response.clientes[i]);
-                            }
-                        }
+                    
                         var nombreC = document.createElement('td');
                         //option_cliente.setAttribute('value',objeto_response.clientes[i].dni);
-
+                        document.createElement('tr');
                          nombreC.innerHTML=objeto_response.clientes[i].nombre;
                         document.getElementById("contenido").appendChild(nombreC);
                    }
