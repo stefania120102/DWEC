@@ -5,8 +5,8 @@ window.onload = function () {
 function lista_datos(){
 $.ajax({
     url:"php/detalle.php", // no paso ningun dato, solo recojo
-    type:"POST",
-    dataType:"json",
+    type:"GET",
+    data:'virtualmarket2',
 }).done(function(respuesta){
     console.log(respuesta); // array de objetos, lo itero y pinto una fila por cada objeto
     for(var i in respuesta){

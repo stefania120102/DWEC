@@ -39,6 +39,11 @@ class Cliente
 			$this->pwd=$pwd;
 			$this->administrador=$administrador;
 		}
+		function buscar ($link){
+			$consulta="SELECT * FROM clientes where  dniCliente='$this->dniCliente'";
+			$result=$link->query($consulta);
+			return $result->fetch_assoc();
+		}
 		function autenticar ($link){
 			$consulta="SELECT nombre FROM clientes where dniCliente='$this->dniCliente' and pwd='$this->pwd'";
 			$result=$link->query($consulta);
@@ -80,7 +85,7 @@ class Producto
 			$this->volumen=$volumen;
 			$this->precio=$precio;
 		}
-		function buscar ($link){
+		function buscarP ($link){
 			$consulta="SELECT * FROM productos where idProducto='$this->idProducto'";
 			$result=$link->query($consulta);
 			return $result->fetch_assoc();
