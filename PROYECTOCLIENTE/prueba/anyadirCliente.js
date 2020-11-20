@@ -1,13 +1,13 @@
 $(document).ready(function(){
 	$("#modalCliente").hide();
-	
+
 
 	$("#verCajaCliente").click(function(){
 		$("#modalCliente").show();
-	})
+	});
 	
-	$(".ocultarCajaCliente").click(function(){
+	$("#ocultarCajaCliente").click(function(){
 		$("#modalCliente").hide();
-	})
+	});
 
 });
