@@ -3,7 +3,8 @@
     <head></head>
     <title>Carrito</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="code_listar.js"></script> 
+    <script src="anyadirCliente.js"></script>
+    <script src="listar.js"></script>
     <script src="jquery-3.5.1.min.js"></script>
     <meta charset="UTF-8">
     <body>
@@ -11,12 +12,24 @@
         <div class="clientes"><a href="menuPrincipal.html">Gestión clientes</a></div>
         <div class="pedidos"><a href="pedidos.html">Gestión de pedidos</a></div>
        
+
+        <div id="modalCliente">
+            <h1>Nuevo usuario</h1>
+            <label>DNI</label><input type="text" name="dni">
+            <label>Nombre</label><input type="text" name="nombre">
+            <label>Dirección</label><input type="text" name="direccion">
+            <label>Email</label><input type="email" name="email">
+            <button class="crear">Crear nuevo</button> <button calss="ocultarCajaCliente">Cancelar</button>
+        </div>
+
+        <button id="verCajaCliente">Añadir usuario</button>
+
         <div class="contenido">
             <table>
                     <tr><th>DNI</th><th>Nombre</th></tr>
                     
             
         </div>
-        <div id="dni"></div>
+       
     </body>
 </html>

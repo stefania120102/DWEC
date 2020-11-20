@@ -1,22 +1,22 @@
 window.onload = function () {
     $(".borrar").click(function(){
-        var fila_borrar = $(this).parent().parent();//$(this) es el boton que ha generado el evento, me interesa la fila
+        var fila_borrar = $(this).parent().parent();
          console.log(fila_borrar);   
          var objeto_dato = { 
-            dni:fila_borrar.find('.dni').text(), //dentro de la fila, busco el td de clase dni, y me quedo con el texto
+            dni:fila_borrar.find('.dni').text(),
         };
         console.log(objeto_dato)
     
          $.ajax({
-             url:"PHP/borrar_dato.php",
+             url:"php/borrar_dato.php",
              type:"POST",
-             data: objeto_dato, // paso el dni para que se borre la fila de la BD
+             data: objeto_dato, 
              dataType:"json",
          }).done(function(respuesta){
             console.log(respuesta);
              if(respuesta){
-                 alert("Dato borrado correctamente !!!!");
-                fila_borrar.remove(); // si se ha borrado la fila de la bd, borro de la pagina
+                 alert("Cliente borrado correctamente");
+                fila_borrar.remove(); 
              }else{
                 alert("Error al borrar")
             } 
@@ -24,6 +24,6 @@ window.onload = function () {
             console.log( "La solicitud ha fallado: " +  textStatus + errorThrown);
          });
 
-    });//del click
+    });
 
-}//del on load
+}

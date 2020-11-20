@@ -1,12 +1,11 @@
 window.onload = function () {
-        lista_datos();
+    lista_datos();
 }
 
 function lista_datos(){
     $.ajax({
-        url:"php/mostrar.php", // no paso ningun dato, solo recojo
+        url:"php/mostrar.php",
     }).done(function(respuesta){
-         // array de objetos, lo itero y pinto una fila por cada objeto
 
             $(".contenido").append(respuesta);
         
