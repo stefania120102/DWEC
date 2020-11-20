@@ -2,13 +2,20 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <script src=""></script>
+        <script src="anyadirCliente.js"></script>
+        <script src="jquery-3.5.1.min.js"></script>
     </head>
     <body method="POST">
+        <button id="verCajaCliente">Añadir usuario</button>
+        <div id="modalCliente">
         <h1>Nuevo usuario</h1>
+        <form>
         <label>DNI</label><input type="text" name="dni">
         <label>Nombre</label><input type="text" name="nombre">
         <label>Dirección</label><input type="text" name="direccion">
         <label>Email</label><input type="email" name="email">
+        <button class="crear">Crear nuevo</button> <button id="ocultarCajaCliente">Cancelar</button>
+        </div>
+        </form>
     </body>
 </html>
