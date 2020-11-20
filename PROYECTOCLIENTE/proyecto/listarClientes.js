@@ -4,13 +4,14 @@ window.onload = function () {
 
 function lista_datos(){
 $.ajax({
-    url:"php/detalle.php", // no paso ningun dato, solo recojo
+    url:"php/detalle.php",
     type:"GET",
-    data:'virtualmarket2',
+    data:'virtualmarket',
 }).done(function(respuesta){
-    console.log(respuesta); // array de objetos, lo itero y pinto una fila por cada objeto
+    console.log(respuesta);
     for(var i in respuesta){
         console.log(i);
+        console.log('hola');
         $(".contenido").append("<tr><td>"+respuesta[i].dniCliente+"</td><td>"+respuesta[i].nombre+"</td><td>"+respuesta[i].direccion+"</td></tr>");
     }
 }).fail(function( jqXHR, textStatus, errorThrown ) {

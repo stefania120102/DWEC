@@ -1,0 +1,35 @@
+h1{
+    background-color: aquamarine;
+    padding: 30px;
+}
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+}
+h1{
+    font-size: 40px;
+}
+a{
+    text-decoration: none;
+    padding: 30px;
+    background-color: teal;
+    color: white;
+    float: left;
+    box-sizing: border-box;
+    border: 7px solid white;
+}
+.contenido{
+box-sizing: border-box;
+border: 1px solid black;
+margin-top: 10%;
+font-size: 20px;
+
+}
+
+.editar{
+    background-color: rgb(127, 240, 14);
+}
+
+.borrar{
+    background-color: rgb(252, 49, 90);
+}
