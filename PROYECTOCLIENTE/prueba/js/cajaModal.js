@@ -6,9 +6,9 @@ $(document).ready(function(){
 		$("#modalCliente").show();
 	});
 	
-	$("#ocultarCajaCliente").click(function(){
+	$("#cancelarCliente").click(function(){
 		$("#modalCliente").hide();
-		alert("Operación cancelada");
+		// alert("Operación cancelada");
 	});
 
 });

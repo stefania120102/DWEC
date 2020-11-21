@@ -1,19 +1,20 @@
-window.onload = function () {
+$(document).ready (function () {
     $("#crear").click(function(){
+        //var dato = $('#nuevosDatos').serialize();
         anyadir_dato();
     });
-}
+});
 
 function anyadir_dato(){
-    var dato = {   //monto un objeto con los datos de la fila a insertar en la BD
-            dni:$('#dni').val(),    
+    var dato = {
+            dniCliente:$('#dni').val(),    
             nombre:$('#nombre').val(),
             direccion:$('#direccion').val(),
             email:$('#email').val(),
             pwd:$('#pwdAnyadir').val(), 
             administrador:$('#adminAnyadir').val()
             };
-    console.log(dato)
+    alert(dato);
     
     $.ajax({
         url:"php/anyadir_dato.php",
@@ -21,13 +22,14 @@ function anyadir_dato(){
         data: dato,
         dataType:"json",
     }).done(function(respuesta){
-        console.log(respuesta); 
+        console.log(respuesta);
        if(respuesta){
             alert("Dato insertado correctamente !");
-            $("#tablaClientes").append("<tr><td>"+dato.dni+"</td><td>"+dato.nombre+"</td></tr>");
+            $("#tablaClientes").append("<tr><td>"+dato.dniCliente+"</td><td>"+dato.nombre+"</td><td><button class='editar'>Editar</button><button class='borrar'>Borrar</button></td></tr>");
         }else{ 
             alert("Error en la insercion");
         } 
+
     }).fail(function( jqXHR, textStatus, errorThrown ) {
         console.log( "La solicitud ha fallado: " +  textStatus + errorThrown);
     });

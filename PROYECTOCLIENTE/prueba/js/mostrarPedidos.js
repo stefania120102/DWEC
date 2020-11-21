@@ -4,11 +4,10 @@ window.onload = function () {
 
 function lista_datos(){
 $.ajax({
-    url:"php/mostrarPedidos.php", // no paso ningun dato, solo recojo
+    url:"php/mostrarPedidos.php",
 }).done(function(respuesta){
-     // array de objetos, lo itero y pinto una fila por cada objeto
 
-        $(".contenido").append(respuesta);
+        $("#tablaPedidos").append(respuesta);
     
 }).fail(function( jqXHR, textStatus, errorThrown ) {
     console.log( "La solicitud ha fallado: " +  textStatus + errorThrown);

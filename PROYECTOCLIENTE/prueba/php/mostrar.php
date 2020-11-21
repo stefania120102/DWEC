@@ -1,6 +1,6 @@
 <?php
 /*if($conex){
-    echo "todo correcto";
+    echo "entro";
 }*/
 $base = include("bd.php");
 
@@ -12,10 +12,9 @@ if($base){
             $dni=$row['dniCliente'];
             $nombre= $row['nombre'];
             ?>
-            <div class="clientes">
-                
+            <div class="clientes">     
                 <div>
-                    <tr><td class="dni"><?php echo $dni." "?></td><td><?php echo $nombre?></td><input type="button" value="Editar" class="editar"><input  type="reset" value="borrar" class="borrar"> </tr>
+                    <tr><td class="dni"><?php echo $dni?></td><td><?php echo $nombre?></td><button class='editar'>Editar</button><button class='borrar'>Borrar</button> </tr>
                 </div>
             </div>
             <?php
