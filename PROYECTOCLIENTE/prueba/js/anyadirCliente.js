@@ -8,6 +8,7 @@ $(document).ready(function(){
 	
 	$("#ocultarCajaCliente").click(function(){
 		$("#modalCliente").hide();
+		alert("Operación cancelada");
 	});
 
 });

@@ -7,7 +7,7 @@ function lista_datos(){
         url:"php/mostrar.php",
     }).done(function(respuesta){
 
-            $(".contenido").append(respuesta);
+            $("#tablaClientes").append(respuesta);
         
     }).fail(function( jqXHR, textStatus, errorThrown ) {
         console.log( "La solicitud ha fallado: " +  textStatus + errorThrown);
