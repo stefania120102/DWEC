@@ -1,7 +1,5 @@
 <?php
-/*if($conex){
-    echo "entro";
-}*/
+
 $base = include("bd.php");
 
 if($base){
@@ -11,12 +9,13 @@ if($base){
         while($row = $resultado-> fetch_array()){
             $dni=$row['dniCliente'];
             $nombre= $row['nombre'];
-            ?>
-            <div class="clientes">     
-                <div>
-                    <tr><td class="dni"><?php echo $dni?></td><td><?php echo $nombre?></td><button class='editar'>Editar</button><button class='borrar'>Borrar</button> </tr>
-                </div>
-            </div>
+            ?> 
+                <tr>
+                    <td class="dni"><?php echo $dni ?></td>
+                    <td><?php echo $nombre ?></td>
+                    <td><button class='editar'>Editar</button>
+                    <button class='borrar'>Borrar</button></td>
+                </tr>
             <?php
 
         }

@@ -1,6 +1,5 @@
 $(document).ready (function () {
     $("#crear").click(function(){
-        //var dato = $('#nuevosDatos').serialize();
         anyadir_dato();
     });
 });
@@ -11,10 +10,9 @@ function anyadir_dato(){
             nombre:$('#nombre').val(),
             direccion:$('#direccion').val(),
             email:$('#email').val(),
-            pwd:$('#pwdAnyadir').val(), 
-            administrador:$('#adminAnyadir').val()
+            pwd:$('#pwd').val(), 
+            administrador:$('#adminstrador').val()
             };
-    alert(dato);
     
     $.ajax({
         url:"php/anyadir_dato.php",

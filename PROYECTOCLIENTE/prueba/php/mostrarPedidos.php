@@ -10,12 +10,16 @@ if($base){
             $idPedido= $row['idPedido'];
             $dni=$row['dniCliente'];
             $fecha= $row['fecha'];
-            ?>
-            <div class="Pedidos">  
-                <div>
-                    <tr><td><?php echo $idPedido?>&nbsp;</td><td><?php echo $dni?>&nbsp;</td><td><?php echo $fecha?></td><input type="button" value="Editar" class="editar"><input  type="reset" value="borrar" class="borrar"> </tr>
-                </div>
-            </div>
+            ?>  
+                <tr>
+                    <td><?php echo $idPedido?>&nbsp;</td>
+                    <td><?php echo $dni?>&nbsp;</td>
+                    <td><?php echo $fecha?></td>
+
+                    <td><button id="detalle">Detalle</button>
+                    <button class="editar">Editar</button>
+                    <button class="borrar">Borrar</button></td>
+                </tr>
             <?php
 
         }

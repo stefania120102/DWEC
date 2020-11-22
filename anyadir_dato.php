@@ -1,18 +1,18 @@
 <?php
 
-	$base = include("bd.php");
+	include("bd.php");
 
-if($base){
+
 	if(isset($_POST['crear'])){
 
 		$dni = $_POST["dni"];
 		$nombre = $_POST["nombre"];
 		$direccion = $_POST["direccion"];
 		$email = $_POST["email"];
-		$pwd = $_POST["pwdAnyadir"];
-		$administrador = $_POST["adminAnyadir"];
+		$pwd = $_POST["pwd"];
+		$administrador = $_POST["administrador"];
 		
-		$consulta = "INSERT INTO clientes(dni,nombre,direccion,email,pwd,administrador) VALUES ('$dni','$nombre','$direccion','$email','$pwd','$administrador')";
+		$consulta = "INSERT INTO clientes(dniCliente,nombre,direccion,email,pwd,administrador) VALUES ('$dni','$nombre','$direccion','$email','$pwd','$administrador')";
 		$resultado = mysqli_query($conex,$consulta);//$base
 		if($resultado){
 			?>
@@ -24,8 +24,5 @@ if($base){
 			<?php
 		}
 	}
-}
-	// header('Content-Type: application/json');	
-	// echo json_encode($resultado);
 
 ?>

@@ -5,21 +5,22 @@ window.onload = function () {
          var dato = { 
             dni:fila_borrar.find('.dni').text(),
         };
-        console.log(dato)
+        console.log(dato);
     
          $.ajax({
-             url:"php/borrar_dato.php",
+             url:"php/borrar.php",
              type:"POST",
-             data: dato, 
+             data: dato,
              dataType:"json",
-         }).done(function(respuesta){
-            console.log(respuesta);
-             if(respuesta){
+             success:function(e){
+                //si todo ha ido bien e devuelve 1
+                if(e==1){
                  alert("El cliente ha sido borrado correctamente");
                 fila_borrar.remove(); 
-             }else{
-                alert("Error al borrar")
-            } 
+                }else{
+                  alert("Error al borrar");
+                } 
+            }
          }).fail(function( jqXHR, textStatus, errorThrown ) {
             console.log( "La solicitud ha fallado: " +  textStatus + errorThrown);
          });

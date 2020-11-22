@@ -8,7 +8,10 @@ $(document).ready(function(){
 	
 	$("#cancelarCliente").click(function(){
 		$("#modalCliente").hide();
-		// alert("Operación cancelada");
+		alert("Operación cancelada");
 	});
+	/*$("#cerrar").click(function(){
+		$("#modalCliente").hide();
+	});*/
 
 });
