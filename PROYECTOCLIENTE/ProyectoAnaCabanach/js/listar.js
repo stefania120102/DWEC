@@ -3,6 +3,7 @@ window.onload = function () {
 }
 
 function lista_datos(){
+    
     $.ajax({
         url:"php/mostrar.php",
     }).done(function(respuesta){
@@ -13,5 +14,4 @@ function lista_datos(){
         console.log( "La solicitud ha fallado: " +  textStatus + errorThrown);
     });
     ;
-
 }

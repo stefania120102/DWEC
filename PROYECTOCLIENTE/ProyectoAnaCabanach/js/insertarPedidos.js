@@ -1,16 +1,16 @@
 $(document).ready (function () {
     $("#crear").click(function(){
-       var dato=$('#nuevosDatos').serialize();
+       var dato=$('#nuevosPedidos').serialize();
       console.log(dato);
         $.ajax({
-            url:"php/insertarCliente.php",
+            url:"php/insertarPedidos.php",
             type:"POST",
             data: dato,
             success:function(e){
                 //si todo ha ido bien e devuelve 1
                 if(e==1){
-                    alert("El cliente ha sido añadido correctamente");
-                    $("#tablaClientes").append("<tr><td id='dni' name='dni'>"+dato.dniCliente+"</td><td>"+dato.nombre+"</td><td><button class='editar'>Editar</button><button class='borrar'>Borrar</button></td></tr>");
+                    alert("El pedido ha sido añadido correctamente");
+                    $("#tablaPedidos").append("<tr><td>"+dato.fecha+"</td><td>"+dato.nombre+"</td><td><button class='detalle'>Detalles<button><button class='editar'>Editar</button><button class='borrar'>Borrar</button></td></tr>");
                 }else{
                     alert("Error al insertar");
                 }

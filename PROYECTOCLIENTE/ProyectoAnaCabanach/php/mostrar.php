@@ -11,7 +11,7 @@ if($base){
             $nombre= $row['nombre'];
             ?> 
                 <tr>
-                    <td class="dni"><?php echo $dni ?></td>
+                    <td id="dni" name="dni"><?php echo $dni ?></td>
                     <td><?php echo $nombre ?></td>
                     <td><button class='editar'>Editar</button>
                     <button class='borrar'>Borrar</button></td>

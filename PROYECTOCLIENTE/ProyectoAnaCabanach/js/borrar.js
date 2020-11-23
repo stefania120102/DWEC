@@ -1,9 +1,10 @@
 window.onload = function () {
     $(".borrar").click(function(){
+        alert("Esta seguro de eliminar este campo");
         var fila_borrar = $(this).parent().parent();
          console.log(fila_borrar);   
          var dato = { 
-            dni:fila_borrar.find('.dni').text(),
+            dni:fila_borrar.find('#dni').text(),
         };
         console.log(dato);
     
@@ -11,7 +12,6 @@ window.onload = function () {
              url:"php/borrar.php",
              type:"POST",
              data: dato,
-             dataType:"json",
              success:function(e){
                 //si todo ha ido bien e devuelve 1
                 if(e==1){

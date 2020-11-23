@@ -9,7 +9,7 @@ if($baseD){
         while($ln = $resultado-> fetch_array()){
             $nombre= $ln['nombre'];
             ?>
-                    <option class="nombre"> <?php echo $nombre?> </option>
+                    <option class="nombre" name="nombre" id="nombre"> <?php echo $nombre?> </option>
             <?php
         }
     }

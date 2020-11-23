@@ -1,6 +1,8 @@
 $(document).ready(function(){
 	$("#modalCliente").hide();
 
+	$("#modalPedidos").hide();
+
 
 	$("#verCajaCliente").click(function(){
 		$("#modalCliente").show();
@@ -8,6 +10,15 @@ $(document).ready(function(){
 	
 	$("#cancelarCliente").click(function(){
 		$("#modalCliente").hide();
+		//alert("Operación cancelada");
+	});
+
+	$("#verCajaPedidos").click(function(){
+		$("#modalPedidos").show();
+	});
+	
+	$("#cancelarPedido").click(function(){
+		$("#modalPedidos").hide();
 		//alert("Operación cancelada");
 	});
 	/*$("#cerrar").click(function(){
