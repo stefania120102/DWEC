@@ -7,7 +7,7 @@ $(document).ready(function(){
 	
 	$("#cancelarPedido").click(function(){
 		$("#modalPedidos").hide();
-		alert("Operación cancelada");
+		//alert("Operación cancelada");
 	});
 	/*$("#cerrar").click(function(){
 		$("#modalPedidos").hide();
