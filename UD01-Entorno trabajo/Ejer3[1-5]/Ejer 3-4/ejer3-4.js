@@ -38,6 +38,7 @@ function calculo(){
     var limite=document.getElementById("limite").value;
     for(x=2;x<=limite;x++){
         // Recordamos el palindromo trabaja con cadenas
+        console.log(x);
         if(esPalindromo(x.toString()) && esPrimo(x)){
             numero++;
         respuesta.push(x);
