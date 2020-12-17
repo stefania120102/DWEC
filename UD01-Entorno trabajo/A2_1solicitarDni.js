@@ -7,7 +7,7 @@
       introducidos. */
 
     function tiempo(){
-            setInterval(mensaje, 20000);  
+            setInterval("mensaje();", 2000);  
     }
     
     function leoDni(numeroDni){
@@ -16,13 +16,16 @@
     }
 
     // nuevo
-
+    tiempo();
     function mensaje(){
     do{
-        tiempo();
+        
         var mensaje = prompt("Introduzca DNI: ");
         var letrasDni = leoDni(mensaje);
-    } while(mensaje == -1);
+        console.log(typeof mensaje);
+        console.log(typeof letrasDni);
+    } while(mensaje != "-1");
         clearInterval(tiempo());
-        document.write(letrasDni);
+        document.write(typeof letrasDni);
+        
     }
