@@ -36,7 +36,7 @@ $.ajax({
     url:"PHP/nuevo_cliente.php",
     type:"POST",
     data: cliente_nuevo,
-    dataType:"json",
+    dataType: "json",
 }).done(function(datos){
     console.log(datos);
     if(datos){
