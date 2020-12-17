@@ -7,7 +7,6 @@ function mostrar(cadena){
     alert("Teléfono "+cadenaPartida[2]);
     alert("Email "+cadenaPartida[3]);    
     alert("Email servidor "+cadenaPartida[3].split("@")[1]);
-
     alert("CP "+cadenaPartida[4]);
     
 }
