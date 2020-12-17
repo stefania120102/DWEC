@@ -9,25 +9,29 @@
 
         tiempo();
 
-        var dnis = getElementById("dni");
-        console.log(dnis);
+        //var dnis = getElementById("dni"); mal...
 
     function tiempo(){
-            setInterval(mensaje, 20000);  
+        do {
+            setInterval(mensaje, 20000);
+            
+        } while (dnis != -1);
+        leoDni();
+        var parar = setInterval(mensaje,20000);
+        clearInterval(parar);
+        
     }
-    
+
+
+    function mensaje(){
+        alert("Introduzca DNI: ");
+    }
+
+      
+
     function leoDni(numeroDni){
         var letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E'];
         return letras[numeroDni%23];
     }
 
-    // nuevo
-
-    function mensaje(){
-    do{
-        tiempo();
-        var mensaje = prompt("Introduzca DNI: ");
-    } while(mensaje == -1);
-        clearInterval(tiempo());
-
-    }
+    
