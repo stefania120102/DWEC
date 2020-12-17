@@ -6,12 +6,6 @@
       seguidas las letras de todos los DNIs 
       introducidos. */
 
-
-        tiempo();
-
-        var dnis = getElementById("dni");
-        console.log(dnis);
-
     function tiempo(){
             setInterval(mensaje, 20000);  
     }
@@ -27,7 +21,8 @@
     do{
         tiempo();
         var mensaje = prompt("Introduzca DNI: ");
+        var letrasDni = leoDni(mensaje);
     } while(mensaje == -1);
         clearInterval(tiempo());
-
+        document.write(letrasDni);
     }
