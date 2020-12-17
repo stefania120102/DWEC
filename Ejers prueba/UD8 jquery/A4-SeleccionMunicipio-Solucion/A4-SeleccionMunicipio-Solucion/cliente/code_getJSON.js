@@ -11,10 +11,10 @@ $( document ).ready(function() {
 
     $("#provincias").change(function(){   // dentro del ready, cuando cambia el select
 		nombre_provincia = $( "#provincias option:selected" ).text();   // recojo lo seleccionado
-		codigo_provincia = $( "#provincias option:selected").val();
-		$("#titulo").html(nombre_provincia+" "+codigo_provincia);
-        var provinciaJSON= { "provincia": codigo_provincia };
-        console.log(provinciaJSON);
+		codigo_provincia = $( "#provincias option:selected").val(); //nos devuelve el value
+		$("#titulo").html(nombre_provincia+" "+codigo_provincia); //escribe en el titulo nombre + valor
+        var provinciaJSON= { "provincia": codigo_provincia }; //crea como array
+        console.log(provinciaJSON); //muestra {provincia: 21}
 		$.getJSON("../servidor/cargaMunicipiosJSON.php",provinciaJSON)
     		  .done(function(response){
                         console.log("response="+response);
