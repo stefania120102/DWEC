@@ -12,13 +12,13 @@ function anyado_partido(){
     var partido = document.createElement('span');
     for(var i=0; i<options.length;i++){ //buscando el option seleccionado
         if(options[i].selected){  // para recoger el atributo escanyos del elegido
-            var escanyos = parseInt(options[i].getAttribute("escanyos"));
+            var escanyos = parseInt(options[i].getAttribute("escanyos")); //quiero el valor de escanyos
             console.log(escanyos);
             partido.style.display= "inline-block"; // para poder modificar anchura
             partido.style.width= (escanyos*2)+"px"; // ancho = escaños * 2
             partido.textContent= options[i].text; //Texto
             partido.style.backgroundColor=options[i].value; //color
-            partido.addEventListener("click", function(){ // gestiono evento para borrar
+            partido.addEventListener("click", function(){ //gestiono evento para borrar
                 this.remove();
                 total-=escanyos;
                 document.getElementById("total").innerHTML="TOTAL :"+total;
