@@ -75,7 +75,8 @@ $(document).ready(function(){
         },
         submitHandler: function(form){  
             alert("Enviando!");
-            envio_carta();     }
+            envio_carta();     
+        }
     })
 });
 
@@ -143,7 +144,6 @@ function envio_carta(){
                         div_carta += " - ***";
                     break;
             }
-            
             div_carta += "</div>";
             $("#cartas").append(div_carta);
             $(".carta").on("mouseenter",function(){
@@ -165,7 +165,7 @@ function envio_carta(){
 
     }
 function pinto_cartas(){
-        $("#cartas").html("");
+        // $("#cartas").html("");
         $.ajax({
             url:"php/listo_cartas.php", // no paso ningun dato, solo recojo
             type:"POST",
@@ -209,7 +209,7 @@ function pinto_cartas(){
                             div_carta += " - ***";
                         break;
                 }
-                div_carta +=" - <button class='borrar'>Borrar</button> "
+                div_carta +=" - <button class='borrar'>Borrar</button> ";
                 div_carta += "</div>";
                 $("#cartas").append(div_carta);
                 $(".carta").on("mouseover",function(){
