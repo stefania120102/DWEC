@@ -19,6 +19,7 @@ $(document).ready(function(){
 
     $('#enviar_municipio').on("click", function(){
         validar();
+        $('#modal').hide();
     });
 
     $('.municipio').on("click", function(){
