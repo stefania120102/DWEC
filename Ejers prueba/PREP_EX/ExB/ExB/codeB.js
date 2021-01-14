@@ -10,6 +10,12 @@ $.validator.addMethod("max_preferencias", function(value, element, arg){
     }    
 }, "Mas de 5 estrellas.");
 
+/**$.validator.setDefaults({
+    submitHandler: function() {
+        alert("submitted! (skipping validation for cancel button)");
+    }
+}); */
+
 $(document).ready(function(){
     console.log("jquery ok");
     pinto_cartas();

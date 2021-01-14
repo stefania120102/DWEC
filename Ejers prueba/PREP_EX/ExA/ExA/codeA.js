@@ -49,7 +49,7 @@ $(document).ready(function(){
             max: "Fecha minima 2019"
         },
         director: {
-            required: "No puedes dejar directro vacio",
+            required: "No puedes dejar director vacio",
             minlength: "Tamaño minimo 5"
         },
         genero: { valueNotEquals: "Por favor selecciona un item!" }

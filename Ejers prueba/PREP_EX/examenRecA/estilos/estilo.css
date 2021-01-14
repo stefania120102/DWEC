@@ -34,4 +34,14 @@ img {
     background-color: lightyellow;
 }
 
+label.error {
+    color:#900;
+    background-color: #FDD;
+    border: solid 1px; 
+    padding-left: 5px;
+    margin-left: 5px;
+}
+
+
+
   

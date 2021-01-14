@@ -1,9 +1,9 @@
 <?php
-$fecha = $_POST["n"];
-$regalo1 = $_POST["c"];
-$regalo2 = $_POST["fecha"];
-$regalo3 = $_POST["max"];
-$pref1 = $_POST["min"];
+$n = $_POST["n"];
+$cielo = $_POST["c"];
+$fecha = $_POST["fecha"];
+$max = $_POST["max"];
+$min = $_POST["min"];
 
 
 $numeroAleatorio = rand(0, 10);
